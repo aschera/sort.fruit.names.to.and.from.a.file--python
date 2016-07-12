@@ -1,0 +1,29 @@
+
+#My fruit sorting program.
+############################################
+
+# This is where the file for input and output are located.
+outfile = open('sorted_fruits.txt', 'w')
+infile = open('unsorted_fruits.txt', 'r')
+
+# Read the input file and add the input into a variable called 'Fruits'.
+Fruits = infile.readlines()
+
+# All items in the list 'Fruits' are now sorted alphabetically.
+Fruits.sort()
+
+# Removing blank lines and writing items in the list into the sorted_fruits file.
+
+for fruit in Fruits: # for every line in the list called 'Fruits' we do the following.
+    if fruit != "\n": # if the list item fruit IS NOT blank, then we add it to the file.
+        outfile.write(fruit) 
+    
+        
+# Now we close the files for input and output.
+infile.close()
+outfile.close()
+
+
+print ("We're done")
+
+
